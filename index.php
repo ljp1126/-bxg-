@@ -23,9 +23,9 @@
         header("HTTP/1.1 404 NotFound");
         echo "404";
     }
+
     //$_SERVER["DOCUMENT_ROOT"] 这个指的就是网站跟目的绝对路径
 
     // include $_SERVER["DOCUMENT_ROOT"]."/views/dashboard/index.html"
     // var_dump($_SERVER);
-    
 ?>

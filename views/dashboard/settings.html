@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
-    <?php include "views/public/css.html"?>
-</head>
+    <?php include "/views/public/css.html"?>
 <body>
     
     <!-- 侧边栏 -->
-    <?php include "views/public/aside.html"?>
+    <?php include "/views/public/aside.html"?>
     <!-- 主体 -->
     <div class="main">
         <div class="container-fluid">
             <!-- 头部 -->
-            <?php include "views/public/header.html"?>
+            <?php include "/views/public/header.html"?>
             <!-- 讲师资料 -->
             <div class="body teacher-profile">
                 <div class="settings">
@@ -103,8 +102,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-xs-8">
-                                <a href="./course_add_step2.html" class="btn btn-success btn-sm pull-right">保 存</a>
-                                <a href="./repass.html" class="btn btn-link btn-sm pull-right">更改密码？</a>
+                                <a href="../course/add_step2.html" class="btn btn-success btn-sm pull-right">保 存</a>
+                                <a href="repass.html" class="btn btn-link btn-sm pull-right">更改密码？</a>
                             </div>
                         </div>
                     </form>
@@ -113,6 +112,6 @@
         </div>
     </div>
 
-    <?php include "views/public/js.html"?>
+    <?php include "/views/public/js.html"?>
 </body>
 </html>
