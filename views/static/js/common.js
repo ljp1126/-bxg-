@@ -7,14 +7,12 @@ define(["jquery", "template", "cookie"], function($, template){
 			//判断用户是否已经登录，如果没有登录，就让其跳回到登录页面
 			//注意：正常的工作项目中，判断用户是否已经登录，是后台提供一个接口
 			//我们向后台发送请求，后台会返回登录状态信息
-			
 			//当前项目中，由于接口不够完善，我们没有接口可以用来判断用户是否已经登录
 			//暂时，先依据cookie中是否存有phpsessid来确定用户是否已经登录
 			
 			if(!$.cookie("PHPSESSID")){
 				location.href = "/dashboard/login"
 			}
-			
 			
 			//从cookie中获取userinfo的信息
 			var userinfo = $.cookie("userinfo");
@@ -40,5 +38,7 @@ define(["jquery", "template", "cookie"], function($, template){
 				}
 			})
 		})
+		
+		
 	})
 })
