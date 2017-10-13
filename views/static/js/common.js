@@ -39,6 +39,24 @@ define(["jquery", "template", "cookie"], function($, template){
 			})
 		})
 		
+		//给导航栏菜单注册事件，实现点击父菜单展示子菜单
+		//有子菜单的项目展示出来，没有子菜单的项目不展示
+		
+		$(".navs>ul>li>ul").parent().click(function () {
+			// alert(1)
+			
+			$(this).children("ul").slideToggle("fast");
+		})
+		
+		//给当前页面对于的导航栏中的a标签加上active类样式
+		var activeA = $(".navs a[href='"+location.pathname+"']");
+		activeA.addClass("active");
+		
+		if(activeA.parent().parent().siblings("a").length>0){
+			activeA.parent().parent().show();
+		};
+		
+		
 		
 	})
 })
