@@ -1,5 +1,5 @@
 
-define(["utils", "jquery", "template", "form", "datepicker", "datepickerCN"], function(utils, $, template){
+define(["utils", "jquery", "template", "form", "datepicker", "datepickerCN","validate"], function(utils, $, template){
   
   //一个页面中，要实现两个功能： 添加  编辑
   //问题1： 如何判断是哪个功能
@@ -29,7 +29,9 @@ define(["utils", "jquery", "template", "form", "datepicker", "datepickerCN"], fu
     data.title = "讲师添加";
     data.buttonText = "添 加";
     data.url = "/api/teacher/add";
-    data.teacher = {};
+    data.teacher = {
+      tc_gender:"0"
+    };
     renderData();
   }
   
@@ -47,17 +49,62 @@ define(["utils", "jquery", "template", "form", "datepicker", "datepickerCN"], fu
       autoclose: true,
       language: "zh-CN"
     })
+    
+    //使用表单验证插件为表单注册验证功能
+    $("form").validate({
+      onBlur: true,
+      onChange: true,
+      sendForm:false,
+      conditional:{
+        forbidden:function (value) {
+          return value != "前端学院"
+        }
+      },
+      description:{
+        name:{
+          required:"用户名不能为空",
+          conditional:"不能使用前端学院"
+        },
+        pass:{
+          required:"密码不能为空",
+          pattern:"密码必须是6-15位的数字和字母"
+        },
+        joindate:{
+          required:"入职日期不能为空"
+        }
+        
+      },
+      valid:function () {
+        //表单验证通过的时候调用，并发送ajax请求提交表单
+        //this就是指这个表单的jQuery对象
+        $(this).ajaxSubmit({
+          success: function(data){
+            if(data.code == 200){
+              location.href = "/teacher/list"
+            }
+          }
+        })
+      },
+      
+      eachValidField:function () {
+        this.parent().parent().addClass("has-success").removeClass("has-error")
+      },
+      eachInvalidField:function () {
+        this.parent().parent().addClass("has-error").removeClass("has-success")
+      }
+      
+    })
   }
   
   
-  $(".body.teacher").on("submit", "form", function(){
-    $(this).ajaxSubmit({
-      success: function(data){
-        if(data.code == 200){
-          location.href = "/teacher/list"
-        }
-      }
-    })
-    return false;
-  })
+  // $(".body.teacher").on("submit", "form", function(){
+  //   $(this).ajaxSubmit({
+  //     success: function(data){
+  //       if(data.code == 200){
+  //         location.href = "/teacher/list"
+  //       }
+  //     }
+  //   })
+  //   return false;
+  // })
 })
