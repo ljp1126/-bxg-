@@ -1,4 +1,17 @@
-define(["jquery", "template", "cookie"], function($, template){
+define(["jquery", "template","nprogress", "cookie"], function($, template,NProgress){
+	
+	// 页面开始加载就显示进度条
+	// NProgress.start();
+	
+	//注册ajax全局事件，在全局开启和结束进度条
+	$(document).ajaxStart(function () {
+		NProgress.start();
+		$("#mask").show();
+	}).ajaxStop(function () {
+		NProgress.done();
+		$("#mask").hide();
+	})
+	
 	$(function(){
 		
 		//如果不是在登录页面，才需要从cookie中获取用户数据然后展示在页面
@@ -56,7 +69,14 @@ define(["jquery", "template", "cookie"], function($, template){
 			activeA.parent().parent().show();
 		};
 		
-		
+		// //注册ajax全局事件，在全局开启和结束进度条
+		// $(document).ajaxStart(function () {
+		// 	NProgress.start();
+		// 	$("#mask").show();
+		// }).ajaxStop(function () {
+		// 	NProgress.done();
+		// 	$("#mask").hide();
+		// })
 		
 	})
 })

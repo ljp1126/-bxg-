@@ -1,4 +1,4 @@
-define(["jquery","template","bootstrap"],function ($,template) {
+define(["jquery","template","nprogress","bootstrap"],function ($,template,NProgress) {
   //过滤器
   // template.defaults.imports.getage = function (value) {
   //   return new Date().getFullYear() - new Date(value).getFullYear()
@@ -10,13 +10,25 @@ define(["jquery","template","bootstrap"],function ($,template) {
   //向后台发送ajax请求，获取后台数据
   $.ajax({
     url:"/api/teacher",
+    
+    //页面开始加载，进度条开始执行
+    // beforeSend:function () {
+    //   NProgress.start();
+    // },
+    
     success:function (data) {
       if(data.code == 200){
         console.log(data);
         var html = template("teacher-list-tpl",data);
         $("#teacher-list").html(html);
       }
-    }
+    },
+    
+    //加载完成，进度条结束
+    // complete:function () {
+    //   NProgress.done();
+    // }
+    
   })
   
   
