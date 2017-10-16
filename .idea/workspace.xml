@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f81ef128-fd45-430d-b7cb-8d0b5af1ace4" name="默认的" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/__MACOSX/._uploadify.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/uploadify-cancel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/uploadify.swf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/Change Log.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/__MACOSX/._Change Log.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/check-exists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/jquery.uploadify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/jquery.uploadify.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/uploadify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/assets/uploadify/uploadify.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/static/js/course/add.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/static/js/course/basic.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/static/js/course/cover.js" />
@@ -49,8 +61,8 @@
       <file leaf-file-name="settings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/static/js/dashboard/settings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+            <state relative-caret-position="-126">
+              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -448,12 +460,12 @@
       <workItem from="1507968293746" duration="2553000" />
       <workItem from="1507991047441" duration="201000" />
       <workItem from="1508027800868" duration="12312000" />
-      <workItem from="1508113777150" duration="9888000" />
+      <workItem from="1508113777150" duration="10214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61800000" />
+    <option name="totallyTimeSpent" value="62126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -764,8 +776,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/static/js/dashboard/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+        <state relative-caret-position="-126">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
           <folding />
         </state>
       </provider>
